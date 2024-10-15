@@ -1,3 +1,4 @@
+# Merge sort recursively splits the array in half until it can't be divided further, then merges the sorted halves back together.
 
 from typing import List
 
