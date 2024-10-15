@@ -58,3 +58,14 @@ def merge(arr: List[int], left: List[int], right: List[int]) -> None:
         j += 1
         k += 1
 
+def main():
+    """
+    Example usage of the merge sort algorithm.
+    """
+    arr = [38, 27, 43, 3, 9, 82, 10]
+    print("Original array:", arr)
+    merge_sort(arr)
+    print("Sorted array:", arr)
+
+if __name__ == "__main__":
+    main()
