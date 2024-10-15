@@ -25,3 +25,36 @@ def merge_sort(arr: List[int]) -> None:
     merge_sort(right_half)
     merge(arr, left_half, right_half)
 
+def merge(arr: List[int], left: List[int], right: List[int]) -> None:
+    """
+    Merges two sorted arrays into the original array.
+    
+    Args:
+    arr (List[int]): The original array to merge into.
+    left (List[int]): The left sorted half.
+    right (List[int]): The right sorted half.
+    
+    Returns:
+    None: The merge is done in-place.
+    """
+    i = j = k = 0
+
+    while i < len(left) and j < len(right):
+        if left[i] <= right[j]:
+            arr[k] = left[i]
+            i += 1
+        else:
+            arr[k] = right[j]
+            j += 1
+        k += 1
+
+    while i < len(left):
+        arr[k] = left[i]
+        i += 1
+        k += 1
+
+    while j < len(right):
+        arr[k] = right[j]
+        j += 1
+        k += 1
+
