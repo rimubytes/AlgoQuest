@@ -25,3 +25,22 @@ def max_subarray(nums):
 
     return max_sum
 
+"""
+The `max_subarray` function takes a list of integers `nums` as input and returns the maximum sum of a contiguous subarray within the input array.
+
+Here's how the algorithm works:
+
+1. Initialize `max_sum` and `current_sum` to the first element of the input array `nums`.
+2. Iterate through the rest of the array starting from the second element.
+3. For each element:
+   - Update the `current_sum` by taking the maximum of:
+     - The current element `nums[i]`
+     - The sum of the current element and the previous `current_sum` (`current_sum + nums[i]`)
+   - Update the `max_sum` by taking the maximum of:
+     - The current `current_sum`
+     - The previous `max_sum`
+4. After the loop, return the final `max_sum`.
+
+The key idea behind this algorithm is to keep track of the maximum sum seen so far (`max_sum`) and the maximum sum ending at the current element (`current_sum`). By updating these two values at each step, we can efficiently find the maximum subarray sum.
+
+"""
