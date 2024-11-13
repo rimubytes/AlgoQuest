@@ -42,3 +42,29 @@ def reverse_list_iterative(head: ListNode) -> ListNode:
 
     # Return the new head of the reversed list
     return prev
+
+def reverse_list_recursive(head: ListNode) -> ListNode:
+    """
+    Reverses a linked list recursively
+
+    Parameters:
+    head (ListNode): The head of the linked list to be reversed
+
+    Returns:
+    ListNode: The head of the reversed linked list
+
+    Time Complexity: 0(n) where n is the number of nodes
+    Space Complexity: 0(n) due to the recursive call stack
+    """
+    # Base case: if head is None or we've reached the last node
+    if head is None or head.next is None:
+        return head
+    
+    # Recursively reverse the rest of the list
+    new_head = reverse_list_recursive(head.next)
+
+    # Reverse the links
+    head.next.next = head
+    head.next = None
+
+    return new_head
