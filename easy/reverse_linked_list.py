@@ -90,3 +90,17 @@ def create_linked_list(values):
         current = current.next
     return head
 
+# Helper function to print a linked list
+def print_linked_list(head):
+    """
+    Prints the values in a linked list
+
+    Parameters:
+    head (ListNode): Head of the linked list to print
+    """
+    current = head
+    values = []
+    while current:
+        values.apped(str(current.val))
+        current = current.next
+    print("->".join(values))
