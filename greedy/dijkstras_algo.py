@@ -49,3 +49,23 @@ def dijkstra(graph: Dict[str, Dict[str, int]], start: str) -> Tuple[Dict[str, in
 
     return distance, previous
 
+def reconstruct_path(previous: Dict[str, str], start: str, end: str) -> List[str]:
+    """
+    Reconstructs the shortest path between start and end nodes
+
+    Parameters:
+    previous (Dict): Dictionary of previous nodes
+    start (str): Starting node
+    end (str): Destination node
+
+    Returns:
+    List of nodes in the shortest path
+    """
+    path = []
+    current = end
+
+    while current is not None:
+        path.append(current)
+        current = previous[current]
+
+    return path[::-1] # Reverse the path
