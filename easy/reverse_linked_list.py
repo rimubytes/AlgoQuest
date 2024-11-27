@@ -68,3 +68,25 @@ def reverse_list_recursive(head: ListNode) -> ListNode:
     head.next = None
 
     return new_head
+
+# Helper function to create a linked list from a list of values
+def create_linked_list(values):
+    """
+    Creates a linked list from a list of values
+
+    Parameters:
+    values (List): List of values to create nodes from
+
+    Returns:
+    ListNode: Head of the created linked list
+    """
+    if not values:
+        return None
+    
+    head = ListNode(values[0])
+    current = head
+    for val in values[1:]:
+        current.next = ListNode(val)
+        current = current.next
+    return head
+
