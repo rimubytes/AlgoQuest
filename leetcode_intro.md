@@ -12,13 +12,13 @@ Easy problems are great for building foundational skills and learning basic prob
 
 **Problems to Solve:**
 
-- [ ] Two Sum
+- [x] Two Sum
 - [ ] Best Time to Buy and Sell Stock
-- [ ] Maximum Subarray
-- [ ] Merge Two Sorted Lists
+- [x] Maximum Subarray
+- [x] Merge Two Sorted Lists
 - [ ] Climbing Stairs
 - [ ] Valid Anagram
-- [ ] Reverse Linked List
+- [x] Reverse Linked List
 - [ ] Maximum Depth of Binary Tree
 - [ ] Roman to Integer
 - [ ] Sqrt(x)
