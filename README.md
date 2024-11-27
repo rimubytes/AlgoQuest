@@ -21,8 +21,8 @@ Common use cases: Sorting, searching, and geometric problems.
   
 **Algorithms to Implement:**
 
-- [ ] Merge Sort
-- [ ] Quick Sort
+- [x] Merge Sort
+- [x] Quick Sort
 - [ ] Binary Search
 - [ ] Closest Pair of Points
 
