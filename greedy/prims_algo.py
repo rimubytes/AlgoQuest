@@ -36,4 +36,3 @@ def prims_algorithm(graph: Dict[str, Dict[str, int]]) -> List[Tuple[str, str, in
              for to_node, weight in graph[start_node].items()]
     heapq.heapify(edges)
 
-    
