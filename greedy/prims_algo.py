@@ -36,3 +36,33 @@ def prims_algorithm(graph: Dict[str, Dict[str, int]]) -> List[Tuple[str, str, in
              for to_node, weight in graph[start_node].items()]
     heapq.heapify(edges)
 
+    while edges:
+        # Get the minimum weight edge
+        weight, from_node, to_node = heapq.heappop(edges)
+
+        # Skip if the destination node is already is the MST
+        if to_node in visited:
+            continue
+
+        # Add the edge to the MST
+        mst.append((from_node, to_node, weight))
+        visited.add(to_node)
+
+        # Add edges from the newly visited node
+        for next_node, next_weight in graph[to_node].items():
+            if next_node not in visited:
+                heapq.heappush(edges, (next_weight, to_node, next_node))
+    
+    return mst
+
+def total_mst_weight(mst: List[Tuple[str, str, int]]) -> int:
+    """
+    Calculate the total weight of the Minimum Spanning Tree.
+    
+    Parameters:
+    mst (List): List of edges in the Minimum Spanning Tree
+    
+    Returns:
+    Total weight of the MST
+    """
+    return sum(weight for _, _, weight in mst)
