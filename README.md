@@ -35,8 +35,8 @@ Common use cases: Optimization problems like shortest paths and spanning trees.
   
 **Algorithms to Implement:**
 
-- [ ] Dijkstra's Algorithm (Shortest Path)
-- [ ] Prim's Algorithm (Minimum Spanning Tree)
+- [x] Dijkstra's Algorithm (Shortest Path)
+- [x] Prim's Algorithm (Minimum Spanning Tree)
 - [ ] Kruskal's Algorithm (Minimum Spanning Tree)
 - [ ] Huffman Coding
 - [ ] Fractional Knapsack
