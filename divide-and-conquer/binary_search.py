@@ -40,7 +40,22 @@ def binary_search(arr: list, target: int) -> int:
     return -1
 
 def binary_search_recursive(arr: list, target: int, left: int = None, right: int = None) -> int:
-        # Initialize boundaries on first call
+    """
+    Performs binary search recursively to find the index of a target value in a sorted array.
+    
+    Parameters:
+    arr (list): A sorted list of integers
+    target (int): The value to search for
+    left (int, optional): Left boundary of search space
+    right (int, optional): Right boundary of search space
+    
+    Returns:
+    int: Index of the target value, or -1 if not found
+    
+    Time Complexity: O(log n)
+    Space Complexity: O(log n) due to recursive call stack
+    """
+    # Initialize boundaries on first call
     if left is None:
         left = 0
     if right is None:
