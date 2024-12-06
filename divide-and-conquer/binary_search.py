@@ -78,3 +78,33 @@ def binary_search_recursive(arr: list, target: int, left: int = None, right: int
     
     # Recursively search right half
     return binary_search_recursive(arr, target, mid + 1, right)
+
+# Example usage demonstration
+def demonstrate_binary_search():
+    """
+    Demonstrates the usage of both iterative and recursive binary search implementations.
+    """
+    # Sorted array for demonstration
+    sorted_array = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
+    
+    # Test cases
+    test_cases = [
+        7,      # Existing element
+        10,     # Non-existing element
+        1,      # First element
+        19,     # Last element
+    ]
+    
+    print("Iterative Binary Search Results:")
+    for target in test_cases:
+        index = binary_search(sorted_array, target)
+        print(f"Target {target}: Index {index}")
+    
+    print("\nRecursive Binary Search Results:")
+    for target in test_cases:
+        index = binary_search_recursive(sorted_array, target)
+        print(f"Target {target}: Index {index}")
+
+# Run demonstration
+if __name__ == "__main__":
+    demonstrate_binary_search()
