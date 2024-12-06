@@ -38,3 +38,28 @@ def binary_search(arr: list, target: int) -> int:
     
     # Target not found
     return -1
+
+def binary_search_recursive(arr: list, target: int, left: int = None, right: int = None) -> int:
+        # Initialize boundaries on first call
+    if left is None:
+        left = 0
+    if right is None:
+        right = len(arr) - 1
+    
+    # Base case: search space exhausted
+    if left > right:
+        return -1
+    
+    # Calculate middle index
+    mid = (left + right) // 2
+    
+    # Check if target is found
+    if arr[mid] == target:
+        return mid
+    
+    # Recursively search left half
+    if arr[mid] > target:
+        return binary_search_recursive(arr, target, left, mid - 1)
+    
+    # Recursively search right half
+    return binary_search_recursive(arr, target, mid + 1, right)
