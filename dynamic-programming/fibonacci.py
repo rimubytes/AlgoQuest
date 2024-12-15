@@ -71,4 +71,27 @@ class FibonacciDP:
         
         return dp[n]
 
+    @staticmethod
+    def space_optimized_tabulation(n):
+        """
+        Space-Optimized Bottom-up Dynamic Programming
         
+        Args:
+            n (int): Index of Fibonacci number to calculate
+        
+        Returns:
+            int: Fibonacci number at index n
+        
+        Time Complexity: O(n)
+        Space Complexity: O(1)
+        """
+        # Handle base cases
+        if n <= 1:
+            return n
+        
+        # Use only two variables instead of entire DP table
+        a, b = 0, 1
+        for _ in range(2, n + 1):
+            a, b = b, a + b
+        
+        return b
