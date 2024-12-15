@@ -42,3 +42,33 @@ class FibonacciDP:
         # Compute and memoize result
         memo[n] = FibonacciDP.memoization(n-1, memo) + FibonacciDP.memoization(n-2, memo)
         return memo[n]
+
+    @staticmethod
+    def tabulation(n):
+        """
+        Bottom-up Dynamic Programming (Tabulation)
+
+        Args:
+            n (int): Index of Fibonacci number to calculate
+
+        Returns:
+            int: Fibonacci number at indexn
+
+        Time Complexity: 0(n)
+        Space COmplexity: 0(n)
+        """
+        # Handle base cases
+        if n <= 1:
+            return n
+        
+        # Create DP table
+        dp = [0] * (n + 1)
+        dp[1] = 1
+        
+        # Build solution iteratively
+        for i in range(2, n + 1):
+            dp[i] = dp[i-1] + dp[i-2]
+        
+        return dp[n]
+
+        
