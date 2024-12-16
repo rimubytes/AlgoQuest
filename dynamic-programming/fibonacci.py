@@ -147,3 +147,23 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+"""
+Key Insights:
+1. Memoization: Top-down approach, recursive with caching
+2. Tabulation: Bottom-up approach, iterative with DP table
+3. Space-Optimized: Constant space complexity solution
+4. Sequence Generation: Flexible method to generate entire sequence
+
+Complexity Analysis:
+- Time Complexity: O(n) for all methods
+- Space Complexity: 
+  * Memoization: O(n) 
+  * Tabulation: O(n)
+  * Space-Optimized: O(1)
+
+Performance Recommendations:
+- Use memoization for recursive problem-solving
+- Use tabulation for iterative approach
+- Use space-optimized method
+"""
