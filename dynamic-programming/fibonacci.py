@@ -125,3 +125,25 @@ class FibonacciDP:
             dp[i] = dp[i-1] + dp[i-2]
         
         return dp
+
+def main():
+    """Demonstration of Dynamic Programming Fibonacci Approaches"""
+    # Test different methods
+    print("Memoization Method:")
+    for i in range(10):
+        print(f"F({i}) = {FibonacciDP.memoization(i)}")
+    
+    print("\nTabulation Method:")
+    for i in range(10):
+        print(f"F({i}) = {FibonacciDP.tabulation(i)}")
+    
+    print("\nSpace-Optimized Tabulation:")
+    for i in range(10):
+        print(f"F({i}) = {FibonacciDP.space_optimized_tabulation(i)}")
+    
+    print("\nFibonacci Sequence Generation:")
+    sequence = FibonacciDP.generate_fibonacci_sequence(10)
+    print(sequence)
+
+if __name__ == "__main__":
+    main()
