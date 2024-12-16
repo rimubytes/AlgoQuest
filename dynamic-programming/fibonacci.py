@@ -95,3 +95,33 @@ class FibonacciDP:
             a, b = b, a + b
         
         return b
+
+    @staticmethod
+    def generate_fibonacci_sequence(limit):
+        """
+        Generate Fibonacci sequence using Dynamic Programming
+        
+        Args:
+            limit (int): Number of Fibonacci numbers to generate
+        
+        Returns:
+            list: Fibonacci sequence
+        
+        Time Complexity: O(n)
+        Space Complexity: O(n)
+        """
+        if limit <= 0:
+            return []
+        
+        # Initialize DP table
+        dp = [0] * limit
+        
+        # Set base cases
+        if limit > 1:
+            dp[1] = 1
+        
+        # Generate sequence
+        for i in range(2, limit):
+            dp[i] = dp[i-1] + dp[i-2]
+        
+        return dp
