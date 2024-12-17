@@ -28,3 +28,28 @@ def solve_n_queens(n: int) -> List[List[str]]:
             line = ['.' * state[row] + 'Q' + '.' * (n - state[row] - 1)]
             board.append(line[0])
         return board
+
+    def is_safe(state, row, col):
+        """
+        Checks if a queen can be placed at the given position without conflicts.
+        
+        Parameters:
+        state (List[int]): Current queen positions
+        row (int): Row to place the queen
+        col (int): Column to place the queen
+        
+        Returns:
+        bool: True if the position is safe, False otherwise
+        """
+        for prev_row in range(row):
+            # Check column conflicts
+            if state[prev_row] == col:
+                return False
+            
+            # Check diagonal conflicts
+            # Absolute difference in rows equals absolute difference in columns
+            if abs(state[prev_row] - col) == abs(prev_row - row):
+                return False
+        
+        return True
+    
