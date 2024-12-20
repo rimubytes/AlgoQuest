@@ -53,3 +53,35 @@ def solve_n_queens(n: int) -> List[List[str]]:
         
         return True
     
+    def backtrack(row, state):
+        """
+        Recursive backtracking to find all valid N-Queens configurations.
+        
+        Parameters:
+        row (int): Current row being processed
+        state (List[int]): Current board state
+        
+        Returns:
+        None, but populates solutions list
+        """
+        # Base case: all queens are placed
+        if row == n:
+            solutions.append(create_board(state))
+            return
+        
+        # Try placing queen in each column of the current row
+        for col in range(n):
+            if is_safe(state, row, col):
+                # Place queen and move to next row
+                state[row] = col
+                backtrack(row + 1, state)
+    
+    # Initialize solutions and board state
+    solutions = []
+    state = [0] * n
+    
+    # Start backtracking from the first row
+    backtrack(0, state)
+    
+    return solutions
+
