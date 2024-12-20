@@ -85,3 +85,31 @@ def solve_n_queens(n: int) -> List[List[str]]:
     
     return solutions
 
+def print_solutions(solutions):
+    """
+    Prints all N-Queens solutions in a readable format.
+    
+    Parameters:
+    solutions (List[List[str]]): List of board configurations
+    """
+    for i, solution in enumerate(solutions, 1):
+        print(f"Solution {i}:")
+        for row in solution:
+            print(row)
+        print()
+
+# Demonstrate N-Queens solution
+def demonstrate_n_queens():
+    """
+    Demonstrates N-Queens solution for different board sizes.
+    """
+    board_sizes = [4, 8]
+    
+    for size in board_sizes:
+        print(f"\n{size}-Queens Problem Solutions:")
+        solutions = solve_n_queens(size)
+        print(f"Total Solutions: {len(solutions)}")
+        
+        # Print first two solutions if available
+        if solutions:
+            print_solutions(solutions[:2])
