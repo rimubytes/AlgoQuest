@@ -21,3 +21,26 @@ def linear_search(arr: list, target: int) -> int:
     # Target not found in array
     return -1
 
+def linear_search_all_occurrences(arr: list, target: int) -> list:
+    """
+    Finds all occurrences of a target value in an array using linear search.
+    
+    Parameters:
+    arr (list): List of elements to search through
+    target (int): Value to search for
+    
+    Returns:
+    list: List of indices where target was found
+    
+    Time Complexity: O(n)
+    Space Complexity: O(k) where k is the number of occurrences
+    """
+    indices = []
+    
+    # Iterate through the array
+    for i in range(len(arr)):
+        if arr[i] == target:
+            indices.append(i)
+            
+    return indices
+
