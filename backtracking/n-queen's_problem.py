@@ -113,3 +113,7 @@ def demonstrate_n_queens():
         # Print first two solutions if available
         if solutions:
             print_solutions(solutions[:2])
+
+# Run demonstration
+if __name__ == "__main__":
+    demonstrate_n_queens()
