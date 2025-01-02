@@ -80,3 +80,5 @@ def demonstrate_linear_search():
     else:
         print("Not found")
 
+if __name__ == "__main__":
+    demonstrate_linear_search()
