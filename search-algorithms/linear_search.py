@@ -44,3 +44,23 @@ def linear_search_all_occurrences(arr: list, target: int) -> list:
             
     return indices
 
+def demonstrate_linear_search():
+    """
+    Demonstrates the usage of linear search algorithms with various examples.
+    """
+    # Test array
+    test_array = [4, 2, 7, 1, 8, 3, 6, 7, 9, 5]
+    
+    # Test cases
+    print("Array:", test_array)
+    
+    # Single occurrence search
+    target = 7
+    result = linear_search(test_array, target)
+    print(f"\nSearching for first occurrence of {target}")
+    if result != -1:
+        print(f"Found at index: {result}")
+    else:
+        print("Not found")
+
+        
