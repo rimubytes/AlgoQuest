@@ -63,4 +63,20 @@ def demonstrate_linear_search():
     else:
         print("Not found")
 
-        
+    # Multiple occurrences search
+    result_all = linear_search_all_occurrences(test_array, target)
+    print(f"\nSearching for all occurrences of {target}")
+    if result_all:
+        print(f"Found at indices: {result_all}")
+    else:
+        print("Not found")
+    
+    # Search for non-existent element
+    target = 10
+    result = linear_search(test_array, target)
+    print(f"\nSearching for {target}")
+    if result != -1:
+        print(f"Found at index: {result}")
+    else:
+        print("Not found")
+
