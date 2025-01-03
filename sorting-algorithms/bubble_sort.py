@@ -32,7 +32,18 @@ def bubble_sort(arr: list) -> list:
     return arr
 
 def bubble_sort_verbose(arr: list) -> list:
-
+    """
+    Implements bubble sort with step-by-step visualization of the sorting process.
+    
+    Parameters:
+    arr (list): The input list to be sorted
+    
+    Returns:
+    list: The sorted list
+    
+    Time Complexity: O(n^2)
+    Space Complexity: O(1)
+    """
     n = len(arr)
     steps = []
     
