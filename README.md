@@ -122,7 +122,7 @@ Common use cases: Searching elements in a list or tree.
   
 **Algorithms to Implement:**
 
-- [ ] Linear Search
+- [x] Linear Search
 - [ ] Binary Search
 - [ ] Depth-First Search (DFS)
 - [ ] Breadth-First Search (BFS)
