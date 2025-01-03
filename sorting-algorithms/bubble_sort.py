@@ -30,3 +30,29 @@ def bubble_sort(arr: list) -> list:
             break
     
     return arr
+
+def bubble_sort_verbose(arr: list) -> list:
+
+    n = len(arr)
+    steps = []
+    
+    for i in range(n):
+        swapped = False
+        
+        for j in range(0, n - i - 1):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+                swapped = True
+                # Store the current state of array after swap
+                steps.append(f"Step {len(steps) + 1}: Swapped {arr[j+1]} and {arr[j]}")
+                steps.append(f"Current array: {arr}")
+        
+        if not swapped:
+            steps.append("Array is sorted!")
+            break
+    
+    # Print all steps
+    for step in steps:
+        print(step)
+    
+    return arr
