@@ -67,3 +67,27 @@ def bubble_sort_verbose(arr: list) -> list:
         print(step)
     
     return arr
+
+def demonstrate_bubble_sort():
+    """
+    Demonstrates the usage of bubble sort with various examples.
+    """
+    # Test cases
+    test_arrays = [
+        [64, 34, 25, 12, 22, 11, 90],
+        [5, 2, 8, 1, 9],
+        [1, 2, 3, 4, 5],  # Already sorted
+        [5, 4, 3, 2, 1]   # Reverse sorted
+    ]
+    
+    for i, arr in enumerate(test_arrays, 1):
+        print(f"\nTest Case {i}:")
+        print(f"Original array: {arr}")
+        sorted_arr = bubble_sort(arr.copy())
+        print(f"Sorted array: {sorted_arr}")
+        
+    print("\nDetailed sorting process for [64, 34, 25, 12, 22]:")
+    bubble_sort_verbose([64, 34, 25, 12, 22])
+
+if __name__ == "__main__":
+    demonstrate_bubble_sort()
