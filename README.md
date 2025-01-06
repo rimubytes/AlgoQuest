@@ -65,7 +65,7 @@ Common use cases: Puzzles like Sudoku, and combinatorial problems.
   
 **Algorithms to Implement:**
 
-- [ ] N-Queens Problem
+- [x] N-Queens Problem
 - [ ] Sudoku Solver
 - [ ] Hamiltonian Path Problem
 - [ ] Subset Sum Problem
@@ -106,7 +106,7 @@ Common use cases: Data analysis, searching, and preprocessing.
   
 **Algorithms to Implement:**
 
-- [ ] Bubble Sort
+- [x] Bubble Sort
 - [ ] Selection Sort
 - [ ] Insertion Sort
 - [ ] Heap Sort
