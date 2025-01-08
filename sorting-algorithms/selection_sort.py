@@ -61,3 +61,10 @@ def visualize_selection_sort(arr):
         
         arr[i], arr[min_idx] = arr[min_idx], arr[i]
         print(f"Step {i + 1}: {arr} (Swapped {arr[i]} to position {i})")
+
+# Test the implementation
+if __name__ == "__main__":
+    test_arr = [64, 34, 25, 12, 22, 11, 90]
+    visualize_selection_sort(test_arr.copy())
+    print("\nSorting another array:")
+    print("Sorted array:", selection_sort([5, 2, 8, 1, 9, 3]))
