@@ -38,3 +38,26 @@ def selection_sort(arr):
         arr[i], arr[min_idx] = arr[min_idx], arr[i]
         
     return arr
+
+# Example usage with step-by-step visualization
+def visualize_selection_sort(arr):
+    """
+    Demonstrates selection sort with step-by-step visualization.
+    
+    Args:
+        arr (list): The input list to be sorted
+        
+    Returns:
+        None: Prints the sorting steps
+    """
+    print("Original array:", arr)
+    n = len(arr)
+    
+    for i in range(n):
+        min_idx = i
+        for j in range(i + 1, n):
+            if arr[j] < arr[min_idx]:
+                min_idx = j
+        
+        arr[i], arr[min_idx] = arr[min_idx], arr[i]
+        print(f"Step {i + 1}: {arr} (Swapped {arr[i]} to position {i})")
