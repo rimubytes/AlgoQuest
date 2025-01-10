@@ -28,6 +28,35 @@ class Graph:
         self.graph[v].append(u)
 
 def bfs(graph: Graph, start_vertex: int) -> Dict[int, int]:
+    """
+    Performs Breadth First Search traversal of the graph.
+    
+    BFS explores all vertices at the current depth before moving to vertices
+    at the next depth level. It uses a queue to keep track of vertices to visit.
+    
+    Args:
+        graph (Graph): The graph to traverse
+        start_vertex (int): The starting vertex for BFS
+        
+    Returns:
+        Dict[int, int]: Dictionary containing distances from start vertex to all reachable vertices
+        
+    Time Complexity:
+        - O(V + E) where V is number of vertices and E is number of edges
+        
+    Space Complexity:
+        - O(V) for the queue and visited set
+        
+    Example:
+        >>> g = Graph()
+        >>> g.add_edge(0, 1)
+        >>> g.add_edge(0, 2)
+        >>> g.add_edge(1, 2)
+        >>> g.add_edge(2, 3)
+        >>> distances = bfs(g, 0)
+        >>> print(distances)
+        {0: 0, 1: 1, 2: 1, 3: 2}
+    """
     # Initialize visited set and queue
     visited: Set[int] = set()
     queue = deque()
