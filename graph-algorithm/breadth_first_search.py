@@ -26,3 +26,28 @@ class Graph:
         if v not in self.graph:
             self.graph[v] = []
         self.graph[v].append(u)
+
+def bfs(graph: Graph, start_vertex: int) -> Dict[int, int]:
+    # Initialize visited set and queue
+    visited: Set[int] = set()
+    queue = deque()
+    distances: Dict[int, int] = {}
+    
+    # Start from the initial vertex
+    queue.append(start_vertex)
+    visited.add(start_vertex)
+    distances[start_vertex] = 0
+    
+    # Process vertices in queue
+    while queue:
+        # Remove vertex from queue
+        current_vertex = queue.popleft()
+        
+        # Process all adjacent vertices
+        for neighbor in graph.graph.get(current_vertex, []):
+            if neighbor not in visited:
+                visited.add(neighbor)
+                queue.append(neighbor)
+                distances[neighbor] = distances[current_vertex] + 1
+    
+    return distances
