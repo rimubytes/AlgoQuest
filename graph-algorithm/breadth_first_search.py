@@ -114,3 +114,26 @@ def visualize_bfs(graph: Graph, start_vertex: int) -> None:
                     print(f"  Discovered neighbor: {neighbor}")
         
         level += 1
+
+# Test the implementation
+if __name__ == "__main__":
+    # Create a sample graph
+    g = Graph()
+    g.add_edge(0, 1)
+    g.add_edge(0, 2)
+    g.add_edge(1, 2)
+    g.add_edge(2, 3)
+    g.add_edge(3, 4)
+    g.add_edge(4, 5)
+    
+    # Test BFS
+    print("Testing BFS traversal:")
+    distances = bfs(g, 0)
+    print(f"Distances from vertex 0: {distances}")
+    
+    # Visualize BFS
+    print("\nVisualizing BFS traversal:")
+    visualize_bfs(g, 0)
+
+
+
