@@ -80,3 +80,31 @@ def bfs(graph: Graph, start_vertex: int) -> Dict[int, int]:
                 distances[neighbor] = distances[current_vertex] + 1
     
     return distances
+
+def visualize_bfs(graph: Graph, start_vertex: int) -> None:
+
+    visited: Set[int] = set()
+    queue = deque()
+    level = 0
+    
+    queue.append(start_vertex)
+    visited.add(start_vertex)
+    
+    print(f"\nStarting BFS from vertex {start_vertex}")
+    
+    while queue:
+        vertices_at_level = len(queue)
+        print(f"\nLevel {level}:")
+        print(f"Queue: {list(queue)}")
+        
+        for _ in range(vertices_at_level):
+            current_vertex = queue.popleft()
+            print(f"Processing vertex: {current_vertex}")
+            
+            for neighbor in graph.graph.get(current_vertex, []):
+                if neighbor not in visited:
+                    visited.add(neighbor)
+                    queue.append(neighbor)
+                    print(f"  Discovered neighbor: {neighbor}")
+        
+        level += 1
