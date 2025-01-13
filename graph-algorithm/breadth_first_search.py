@@ -82,7 +82,13 @@ def bfs(graph: Graph, start_vertex: int) -> Dict[int, int]:
     return distances
 
 def visualize_bfs(graph: Graph, start_vertex: int) -> None:
-
+    """
+    Demonstrates BFS traversal with step-by-step visualization.
+    
+    Args:
+        graph (Graph): The graph to traverse
+        start_vertex (int): The starting vertex for BFS
+    """
     visited: Set[int] = set()
     queue = deque()
     level = 0
