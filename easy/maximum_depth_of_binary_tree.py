@@ -73,3 +73,45 @@ def visualize_tree_depth(root: TreeNode) -> None:
     print("\nTree Structure with Depths:")
     _visualize_depth(root, 1)
     print(f"\nMaximum Depth: {maxDepth(root)}")
+
+# Test cases
+def test_max_depth():
+    """
+    Test the maxDepth function with various tree configurations.
+    """
+    # Test Case 1: Regular balanced tree
+    #      3
+    #     / \
+    #    9  20
+    #       / \
+    #      15  7
+    tree1 = TreeNode(3)
+    tree1.left = TreeNode(9)
+    tree1.right = TreeNode(20)
+    tree1.right.left = TreeNode(15)
+    tree1.right.right = TreeNode(7)
+    print("\nTest Case 1: Balanced Tree")
+    visualize_tree_depth(tree1)
+
+    # Test Case 2: Linear tree (skewed)
+    #    1
+    #     \
+    #      2
+    #       \
+    #        3
+    tree2 = TreeNode(1)
+    tree2.right = TreeNode(2)
+    tree2.right.right = TreeNode(3)
+    print("\nTest Case 2: Skewed Tree")
+    visualize_tree_depth(tree2)
+    
+    # Test Case 3: Empty tree
+    print("\nTest Case 3: Empty Tree")
+    visualize_tree_depth(None)
+    
+    # Test Case 4: Single node tree
+    print("\nTest Case 4: Single Node Tree")
+    visualize_tree_depth(TreeNode(1))
+
+if __name__ == "__main__":
+    test_max_depth()
