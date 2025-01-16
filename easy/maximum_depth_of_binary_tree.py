@@ -53,3 +53,18 @@ def maxDepth(root: TreeNode) -> int:
     
     # Return the maximum depth between left and right subtrees, plus 1 for current node
     return max(left_depth, right_depth) + 1
+
+def visualize_tree_depth(root: TreeNode) -> None:
+
+    def _visualize_depth(node: TreeNode, depth: int, prefix: str = "") -> None:
+        if not node:
+            print(f"{prefix}None (Depth: {depth})")
+            return
+        
+        print(f"{prefix}Node: {node.val} (Depth: {depth})")
+        _visualize_depth(node.left, depth + 1, prefix + "├── Left: ")
+        _visualize_depth(node.right, depth + 1, prefix + "└── Right: ")
+    
+    print("\nTree Structure with Depths:")
+    _visualize_depth(root, 1)
+    print(f"\nMaximum Depth: {maxDepth(root)}")
