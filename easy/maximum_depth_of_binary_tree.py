@@ -55,7 +55,12 @@ def maxDepth(root: TreeNode) -> int:
     return max(left_depth, right_depth) + 1
 
 def visualize_tree_depth(root: TreeNode) -> None:
-
+    """
+    Visualize the depth calculation process for a binary tree.
+    
+    Args:
+        root (TreeNode): Root node of the binary tree
+    """
     def _visualize_depth(node: TreeNode, depth: int, prefix: str = "") -> None:
         if not node:
             print(f"{prefix}None (Depth: {depth})")
