@@ -19,7 +19,7 @@ Easy problems are great for building foundational skills and learning basic prob
 - [ ] Climbing Stairs
 - [ ] Valid Anagram
 - [x] Reverse Linked List
-- [ ] Maximum Depth of Binary Tree
+- [x] Maximum Depth of Binary Tree
 - [ ] Roman to Integer
 - [ ] Sqrt(x)
 - [ ] Single Number
