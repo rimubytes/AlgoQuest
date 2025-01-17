@@ -91,7 +91,7 @@ Common use cases: Pathfinding, scheduling, and network flow.
   
 **Algorithms to Implement:**
 
-- [ ] Breadth-First Search (BFS)
+- [x] Breadth-First Search (BFS)
 - [ ] Depth-First Search (DFS)
 - [ ] Floyd-Warshall Algorithm (All-Pairs Shortest Paths)
 - [ ] Topological Sort
