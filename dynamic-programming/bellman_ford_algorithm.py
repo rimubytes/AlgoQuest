@@ -31,7 +31,34 @@ class Graph:
         self.edges.append((source, dest, weight))
 
 def bellman_ford(graph: Graph, source: int) -> Tuple[Optional[Dict[int, float]], Optional[Dict[int, int]]]:
-
+    """
+    Implement Bellman-Ford algorithm using dynamic programming approach.
+    
+    The algorithm finds shortest paths from source vertex to all other vertices.
+    It can detect negative weight cycles in the graph.
+    
+    Dynamic Programming Aspects:
+    1. Optimal Substructure: Shortest path contains other shortest paths
+    2. Overlapping Subproblems: Same shortest paths are computed multiple times
+    3. State: dp[v] represents shortest distance to vertex v
+    4. Recurrence Relation: dp[v] = min(dp[v], dp[u] + weight(u,v))
+    
+    Time Complexity:
+        O(V * E) where V is number of vertices and E is number of edges
+        
+    Space Complexity:
+        O(V) for storing distances and predecessors
+        
+    Args:
+        graph (Graph): Input graph with weighted edges
+        source (int): Source vertex
+        
+    Returns:
+        Tuple[Optional[Dict[int, float]], Optional[Dict[int, int]]]: 
+            - Dictionary of shortest distances and predecessors
+            - None, None if negative cycle exists
+            
+    """
     # Initialize distances and predecessors (dp table)
     distances: Dict[int, float] = {i: inf for i in range(graph.vertices)}
     distances[source] = 0
