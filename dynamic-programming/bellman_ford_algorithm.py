@@ -97,3 +97,22 @@ def visualize_solution(graph: Graph, source: int) -> None:
     
     print("\nShortest Paths from source vertex", source)
     print("=====================================")
+    
+    for vertex in range(graph.vertices):
+        if vertex != source:
+            path = []
+            current = vertex
+            
+            # Reconstruct path
+            while current is not None:
+                path.append(current)
+                current = predecessors.get(current)
+            
+            # Print path and distance
+            path = path[::-1]  # Reverse path
+            if distances[vertex] != inf:
+                print(f"\nPath to vertex {vertex}:")
+                print(f"Distance: {distances[vertex]}")
+                print(f"Path: {' -> '.join(map(str, path))}")
+            else:
+                print(f"\nNo path exists to vertex {vertex}")
