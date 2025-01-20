@@ -80,3 +80,11 @@ def bellman_ford(graph: Graph, source: int) -> Tuple[Optional[Dict[int, float]],
             return None, None
     
     return distances, predecessors
+
+def visualize_solution(graph: Graph, source: int) -> None:
+
+    distances, predecessors = bellman_ford(graph, source)
+    
+    if distances is None or predecessors is None:
+        print("Cannot visualize due to negative weight cycle")
+        return
