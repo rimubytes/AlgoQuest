@@ -116,3 +116,17 @@ def visualize_solution(graph: Graph, source: int) -> None:
                 print(f"Path: {' -> '.join(map(str, path))}")
             else:
                 print(f"\nNo path exists to vertex {vertex}")
+
+# Test the implementation
+if __name__ == "__main__":
+    # Test Case 1: Basic graph with positive weights
+    print("\nTest Case 1: Basic graph with positive weights")
+    g1 = Graph(5)
+    g1.add_edge(0, 1, 4)
+    g1.add_edge(0, 2, 2)
+    g1.add_edge(1, 2, 1)
+    g1.add_edge(1, 3, 5)
+    g1.add_edge(2, 3, 8)
+    g1.add_edge(2, 4, 10)
+    g1.add_edge(3, 4, 2)
+    visualize_solution(g1, 0)
