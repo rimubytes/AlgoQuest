@@ -130,3 +130,13 @@ if __name__ == "__main__":
     g1.add_edge(2, 4, 10)
     g1.add_edge(3, 4, 2)
     visualize_solution(g1, 0)
+    
+    # Test Case 2: Graph with negative weights (but no negative cycles)
+    print("\nTest Case 2: Graph with negative weights")
+    g2 = Graph(5)
+    g2.add_edge(0, 1, 4)
+    g2.add_edge(0, 2, 2)
+    g2.add_edge(1, 2, -1)
+    g2.add_edge(2, 3, 2)
+    g2.add_edge(3, 4, -3)
+    visualize_solution(g2, 0)
