@@ -53,7 +53,7 @@ Common use cases: Sequence alignment, knapsack problem, and pathfinding.
 - [x] Fibonacci Sequence
 - [ ] Longest Common Subsequence
 - [ ] 0/1 Knapsack Problem
-- [ ] Bellman-Ford Algorithm (Shortest Path)
+- [x] Bellman-Ford Algorithm (Shortest Path)
 - [ ] Coin Change Problem
 
 ---
