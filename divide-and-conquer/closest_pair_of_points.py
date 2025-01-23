@@ -14,7 +14,11 @@ def brute_force(points: List[Tuple[float, float]], n: int) -> float:
     return min_dist
 
 def strip_closest(strip: List[Tuple[float, float]], d: float) -> float:
-
+    """
+    Find minimum distance among points in strip.
+    
+    Time Complexity: O(n), as inner loop runs at most 6 times
+    """
     min_dist = d
     size = len(strip)
     
