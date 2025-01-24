@@ -30,6 +30,18 @@ def strip_closest(strip: List[Tuple[float, float]], d: float) -> float:
     return min_dist
 
 def closest_pair(points: List[Tuple[float, float]]) -> Tuple[float, List[Tuple[float, float]]]:
+    """
+    Find closest pair of points using Divide and Conquer.
+    
+    Time Complexity: O(n log n)
+    Space Complexity: O(n)
+    
+    Args:
+        points: List of (x, y) coordinates
+        
+    Returns:
+        Tuple of minimum distance and list of closest points
+    """
     # Sort points by x and y coordinates
     points_x = sorted(points, key=lambda p: p[0])
     points_y = sorted(points, key=lambda p: p[1])
@@ -45,7 +57,7 @@ def closest_pair(points: List[Tuple[float, float]]) -> Tuple[float, List[Tuple[f
                     if distance(points_x[i], points_x[j]) == min_d:
                         closest = [points_x[i], points_x[j]]
             return min_d, closest
-            
+
         mid = n // 2
         mid_point = points_x[mid]
         
@@ -63,3 +75,15 @@ def closest_pair(points: List[Tuple[float, float]]) -> Tuple[float, List[Tuple[f
         # Create strip of points closer than min_d to the middle line
         strip = [p for p in points_y if abs(p[0] - mid_point[0]) < min_d]
         strip_min = strip_closest(strip, min_d)
+        
+        if strip_min < min_d:
+            min_d = strip_min
+            closest_pair = []
+            for i in range(len(strip)):
+                for j in range(i + 1, len(strip)):
+                    if distance(strip[i], strip[j]) == min_d:
+                        closest_pair = [strip[i], strip[j]]
+        
+        return min_d, closest_pair
+    
+    return closest_util(points_x, points_y, len(points))
