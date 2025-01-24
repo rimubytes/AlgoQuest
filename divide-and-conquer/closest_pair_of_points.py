@@ -45,3 +45,21 @@ def closest_pair(points: List[Tuple[float, float]]) -> Tuple[float, List[Tuple[f
                     if distance(points_x[i], points_x[j]) == min_d:
                         closest = [points_x[i], points_x[j]]
             return min_d, closest
+            
+        mid = n // 2
+        mid_point = points_x[mid]
+        
+        # Split points into left and right halves
+        points_y_left = [p for p in points_y if p[0] <= mid_point[0]]
+        points_y_right = [p for p in points_y if p[0] > mid_point[0]]
+        
+        # Recursively find minimum distances in left and right halves
+        left_min, left_pair = closest_util(points_x[:mid], points_y_left, mid)
+        right_min, right_pair = closest_util(points_x[mid:], points_y_right, n - mid)
+        
+        min_d = min(left_min, right_min)
+        closest_pair = left_pair if left_min < right_min else right_pair
+        
+        # Create strip of points closer than min_d to the middle line
+        strip = [p for p in points_y if abs(p[0] - mid_point[0]) < min_d]
+        strip_min = strip_closest(strip, min_d)
