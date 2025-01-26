@@ -94,3 +94,9 @@ def visualize_points(points: List[Tuple[float, float]], closest: List[Tuple[floa
 
     x_coords = [p[0] for p in points]
     y_coords = [p[1] for p in points]
+
+    plt.scatter(x_coords, y_coords, color='blue', label='Points')
+    if closest:
+        closest_x = [p[0] for p in closest]
+        closest_y = [p[1] for p in closest]
+        plt.plot(closest_x, closest_y, 'r-', label='Closest Pair')
