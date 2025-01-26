@@ -87,3 +87,10 @@ def closest_pair(points: List[Tuple[float, float]]) -> Tuple[float, List[Tuple[f
         return min_d, closest_pair
     
     return closest_util(points_x, points_y, len(points))
+
+def visualize_points(points: List[Tuple[float, float]], closest: List[Tuple[float, float]]) -> None:
+    """Print visual representation of points and closest pair."""
+    import matplotlib.pyplot as plt
+
+    x_coords = [p[0] for p in points]
+    y_coords = [p[1] for p in points]
