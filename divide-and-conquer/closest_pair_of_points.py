@@ -107,3 +107,13 @@ def visualize_points(points: List[Tuple[float, float]], closest: List[Tuple[floa
     plt.legend()
     plt.grid(True)
     plt.show()
+
+# Test the implementation
+if __name__ == "__main__":
+    test_points = [
+        (2, 3), (12, 30), (40, 50), (5, 1), (12, 10), (3, 4)
+    ]
+    min_distance, closest = closest_pair(test_points)
+    print(f"Minimum distance: {min_distance:.2f}")
+    print(f"Closest pair: {closest}")
+    visualize_points(test_points, closest)
