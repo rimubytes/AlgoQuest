@@ -24,7 +24,7 @@ Common use cases: Sorting, searching, and geometric problems.
 - [x] Merge Sort
 - [x] Quick Sort
 - [x] Binary Search
-- [ ] Closest Pair of Points
+- [x] Closest Pair of Points
 
 ---
 
