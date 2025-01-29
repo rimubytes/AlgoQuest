@@ -11,7 +11,13 @@ class SudokuSolver:
     """
     
     def __init__(self, board: List[List[int]]):
-
+        """
+        Initialize the solver with a 9x9 Sudoku board.
+        
+        Args:
+            board: 9x9 list of lists representing the Sudoku puzzle
+                  0 represents empty cells
+        """
         self.board = board
         self.SIZE = 9
         self.BOX_SIZE = 3
