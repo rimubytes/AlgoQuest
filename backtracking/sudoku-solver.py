@@ -23,7 +23,15 @@ class SudokuSolver:
         self.BOX_SIZE = 3
 
     def solve(self) -> bool:
-
+        """
+        Solve the Sudoku puzzle using backtracking.
+        
+        Time Complexity: O(9^(n*n)) where n is the board size
+        Space Complexity: O(n*n) for recursion stack
+        
+        Returns:
+            bool: True if solution exists, False otherwise
+        """
         empty = self.find_empty()
         if not empty:
             return True
