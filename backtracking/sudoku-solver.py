@@ -61,3 +61,9 @@ class SudokuSolver:
                     return (i, j)
         return None
     
+    def is_valid(self, num: int, row: int, col: int) -> bool:
+
+        # Check row
+        for j in range(self.SIZE):
+            if self.board[row][j] == num and col != j:
+                return False
