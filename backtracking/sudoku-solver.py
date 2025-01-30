@@ -52,3 +52,12 @@ class SudokuSolver:
                 self.board[row][col] = 0
                 
         return False
+
+    def find_empty(self) -> Optional[Tuple[int, int]]:
+        """Find an empty cell in the board."""
+        for i in range(self.SIZE):
+            for j in range(self.SIZE):
+                if self.board[i][j] == 0:
+                    return (i, j)
+        return None
+    
