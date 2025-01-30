@@ -67,3 +67,8 @@ class SudokuSolver:
         for j in range(self.SIZE):
             if self.board[row][j] == num and col != j:
                 return False
+
+        # Check column
+        for i in range(self.SIZE):
+            if self.board[i][col] == num and row != i:
+                return False
