@@ -72,3 +72,15 @@ class SudokuSolver:
         for i in range(self.SIZE):
             if self.board[i][col] == num and row != i:
                 return False
+
+        # Check 3x3 box
+        box_row = row - row % self.BOX_SIZE
+        box_col = col - col % self.BOX_SIZE
+        
+        for i in range(self.BOX_SIZE):
+            for j in range(self.BOX_SIZE):
+                if (self.board[box_row + i][box_col + j] == num and
+                    (box_row + i != row or box_col + j != col)):
+                    return False
+                    
+        return True
