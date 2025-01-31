@@ -84,3 +84,15 @@ class SudokuSolver:
                     return False
                     
         return True
+
+    def visualize_step(self, row: int, col: int, num: int) -> None:
+        """
+        Print current board state with attempt highlight.
+        
+        Args:
+            row: Current row being tried
+            col: Current column being tried
+            num: Number being attempted
+        """
+        print(f"\nTrying {num} at position ({row}, {col})")
+        self.print_board()
