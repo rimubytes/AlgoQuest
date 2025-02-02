@@ -96,3 +96,18 @@ class SudokuSolver:
         """
         print(f"\nTrying {num} at position ({row}, {col})")
         self.print_board()
+
+    def print_board(self) -> None:
+        """Print the current state of the board."""
+        for i in range(self.SIZE):
+            if i % self.BOX_SIZE == 0 and i != 0:
+                print("- - - - - - - - - - - -")
+            
+            for j in range(self.SIZE):
+                if j % self.BOX_SIZE == 0 and j != 0:
+                    print("|", end=" ")
+                    
+                if j == self.SIZE - 1:
+                    print(self.board[i][j])
+                else:
+                    print(str(self.board[i][j]) + " ", end="")
