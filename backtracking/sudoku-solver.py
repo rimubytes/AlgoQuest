@@ -144,3 +144,8 @@ def demonstrate_solver():
     solver2 = SudokuSolver(puzzle2)
     result2 = solver2.solve()
     print("Solvable:", result2)
+
+if __name__ == "__main__":
+    demonstrate_solver()
+    print("\nRunning additional tests...")
+    run_tests()
