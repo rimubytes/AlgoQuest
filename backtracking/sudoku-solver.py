@@ -137,3 +137,10 @@ def demonstrate_solver():
         solver.print_board()
     else:
         print("\nNo solution exists!")
+
+    # Test Case 2: Empty puzzle
+    puzzle2 = [[0]*9 for _ in range(9)]
+    print("\nTest Case 2: Empty Puzzle")
+    solver2 = SudokuSolver(puzzle2)
+    result2 = solver2.solve()
+    print("Solvable:", result2)
