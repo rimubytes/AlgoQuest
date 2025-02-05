@@ -1,5 +1,10 @@
 def mySqrt_binary_search(x: int) -> int:
-
+    """
+    Calculate square root using binary search approach.
+    Returns the floor value of square root of x.
+    Time complexity: O(log n)
+    Space complexity: O(1)
+    """
     if x == 0:
         return 0
     
