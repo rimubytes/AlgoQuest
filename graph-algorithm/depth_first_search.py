@@ -19,3 +19,13 @@ class Graph:
         """
         self.vertices = vertices
         self.graph = defaultdict(list)
+
+    def add_edge(self, u: int, v: int) -> None:
+        """
+        Add an edge to the graph.
+        
+        Args:
+            u (int): Source vertex
+            v (int): Destination vertex
+        """
+        self.graph[u].append(v)
