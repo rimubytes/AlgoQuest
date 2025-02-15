@@ -31,6 +31,16 @@ class Graph:
         self.graph[u].append(v)
 
     def dfs_recursive(self, start: int, visited: Optional[Set[int]] = None) -> List[int]:
+        """
+        Perform Depth First Search starting from given vertex using recursion.
+        
+        Args:
+            start (int): Starting vertex for DFS
+            visited (Set[int], optional): Set to keep track of visited vertices
+        
+        Returns:
+            List[int]: List of vertices in DFS traversal order
+        """
         # Initialize visited set if None
         if visited is None:
             visited = set()
