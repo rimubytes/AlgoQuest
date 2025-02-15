@@ -29,3 +29,21 @@ class Graph:
             v (int): Destination vertex
         """
         self.graph[u].append(v)
+
+    def dfs_recursive(self, start: int, visited: Optional[Set[int]] = None) -> List[int]:
+        # Initialize visited set if None
+        if visited is None:
+            visited = set()
+            
+        result = []
+        
+        # Mark current node as visited and add to result
+        visited.add(start)
+        result.append(start)
+        
+        # Recur for all adjacent vertices
+        for neighbor in self.graph[start]:
+            if neighbor not in visited:
+                result.extend(self.dfs_recursive(neighbor, visited))
+                
+        return result
