@@ -59,7 +59,15 @@ class Graph:
         return result
 
 def dfs_iterative(self, start: int) -> List[int]:
-
+        """
+        Perform Depth First Search starting from given vertex using iteration.
+        
+        Args:
+            start (int): Starting vertex for DFS
+        
+        Returns:
+            List[int]: List of vertices in DFS traversal order
+        """
         visited = set()
         stack = [start]
         result = []
@@ -78,3 +86,4 @@ def dfs_iterative(self, start: int) -> List[int]:
                         stack.append(neighbor)
         
         return result
+
