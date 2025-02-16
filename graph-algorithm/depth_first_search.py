@@ -52,8 +52,29 @@ class Graph:
         result.append(start)
         
         # Recur for all adjacent vertices
-        for neighbor in self.graph[start]:
-            if neighbor not in visited:
-                result.extend(self.dfs_recursive(neighbor, visited))
+        for neighbour in self.graph[start]:
+            if neighbour not in visited:
+                result.extend(self.dfs_recursive(neighbour, visited))
                 
+        return result
+
+def dfs_iterative(self, start: int) -> List[int]:
+
+        visited = set()
+        stack = [start]
+        result = []
+        
+        while stack:
+            vertex = stack.pop()
+            
+            if vertex not in visited:
+                visited.add(vertex)
+                result.append(vertex)
+                
+                # Add neighbors to stack in reverse order
+                # to maintain similar order to recursive version
+                for neighbor in reversed(self.graph[vertex]):
+                    if neighbor not in visited:
+                        stack.append(neighbor)
+        
         return result
