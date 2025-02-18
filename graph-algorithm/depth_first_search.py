@@ -88,8 +88,19 @@ def dfs_iterative(self, start: int) -> List[int]:
         return result
 
 def dfs_find_path(self, start: int, end: int) -> Optional[List[int]]:
+    """
+    Find a path between start and end vertices using DFS.
+    
+    Args:
+        start (int): Starting vertex
+        end (int): Target vertex
+    
+    Returns:
+        Optional[List[int]]: Path from start to end if exists, None otherwise
+    """
     visited = set()
     path = []
+    
     def dfs_path_helper(current: int) -> bool:
         visited.add(current)
         path.append(current)
