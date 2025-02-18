@@ -87,3 +87,8 @@ def dfs_iterative(self, start: int) -> List[int]:
         
         return result
 
+    def dfs_find_path(self, start: int, end: int) -> Optional[List[int]]:
+
+        visited = set()
+        path = []
+
