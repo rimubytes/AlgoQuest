@@ -87,8 +87,24 @@ def dfs_iterative(self, start: int) -> List[int]:
         
         return result
 
-    def dfs_find_path(self, start: int, end: int) -> Optional[List[int]]:
-
-        visited = set()
-        path = []
-
+def dfs_find_path(self, start: int, end: int) -> Optional[List[int]]:
+    visited = set()
+    path = []
+    def dfs_path_helper(current: int) -> bool:
+        visited.add(current)
+        path.append(current)
+        
+        if current == end:
+            return True
+            
+        for neighbor in self.graph[current]:
+            if neighbor not in visited:
+                if dfs_path_helper(neighbor):
+                    return True
+        
+        path.pop()
+        return False
+    
+    if dfs_path_helper(start):
+        return path
+    return None
