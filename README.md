@@ -107,7 +107,7 @@ Common use cases: Data analysis, searching, and preprocessing.
 **Algorithms to Implement:**
 
 - [x] Bubble Sort
-- [ ] Selection Sort
+- [x] Selection Sort
 - [ ] Insertion Sort
 - [ ] Heap Sort
 - [ ] Merge Sort
