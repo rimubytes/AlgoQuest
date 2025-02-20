@@ -48,7 +48,27 @@ def insertion_sort(arr):
     return arr
 
 def insertion_sort_with_steps(arr):
-
+    """
+    Implementation of insertion sort algorithm with step-by-step visualization.
+    
+    This version prints the state of the array after each insertion operation,
+    making it useful for educational purposes.
+    
+    Args:
+        arr (list): The array/list to be sorted
+        
+    Returns:
+        list: The sorted array
+        
+    Example:
+        >>> insertion_sort_with_steps([5, 2, 4, 6, 1, 3])
+        Step 1: [2, 5, 4, 6, 1, 3]
+        Step 2: [2, 4, 5, 6, 1, 3]
+        Step 3: [2, 4, 5, 6, 1, 3]
+        Step 4: [1, 2, 4, 5, 6, 3]
+        Step 5: [1, 2, 3, 4, 5, 6]
+        [1, 2, 3, 4, 5, 6]
+    """
     # Make a copy of the input array
     arr = arr.copy()
     
