@@ -46,3 +46,26 @@ def insertion_sort(arr):
         arr[j + 1] = current_element
         
     return arr
+
+def insertion_sort_with_steps(arr):
+
+    # Make a copy of the input array
+    arr = arr.copy()
+    
+    # Iterate through the array starting from the second element
+    for i in range(1, len(arr)):
+        current_element = arr[i]
+        j = i - 1
+        
+        # Move elements greater than current_element one position ahead
+        while j >= 0 and arr[j] > current_element:
+            arr[j + 1] = arr[j]
+            j -= 1
+            
+        # Place current element at its correct position
+        arr[j + 1] = current_element
+        
+        # Print the current state of the array
+        print(f"Step {i}: {arr}")
+        
+    return arr
