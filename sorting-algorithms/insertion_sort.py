@@ -89,3 +89,14 @@ def insertion_sort_with_steps(arr):
         print(f"Step {i}: {arr}")
         
     return arr
+
+def test_insertion_sort():
+
+    test_cases = [
+        [5, 2, 4, 6, 1, 3],           
+        [1, 2, 3, 4, 5, 6],           
+        [6, 5, 4, 3, 2, 1],           
+        [3, 1, 4, 1, 5, 9, 2, 6, 5],  
+        [],                           
+        [1]                           
+    ]
