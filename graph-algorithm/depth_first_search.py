@@ -121,7 +121,16 @@ def dfs_find_path(self, start: int, end: int) -> Optional[List[int]]:
     return None
 
 def test_dfs():
-
+    """
+    Test function demonstrating the usage of DFS implementations.
+    """
+    # Create a sample graph
+    #     0
+    #    / \
+    #   1   2
+    #  /   / \
+    # 3   4   5
+    
     g = Graph(6)
     g.add_edge(0, 1)
     g.add_edge(0, 2)
