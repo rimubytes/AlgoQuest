@@ -119,3 +119,32 @@ def dfs_find_path(self, start: int, end: int) -> Optional[List[int]]:
     if dfs_path_helper(start):
         return path
     return None
+
+def test_dfs():
+
+    g = Graph(6)
+    g.add_edge(0, 1)
+    g.add_edge(0, 2)
+    g.add_edge(1, 3)
+    g.add_edge(2, 4)
+    g.add_edge(2, 5)
+    
+    print("Graph Structure:")
+    print("0 -> 1, 2")
+    print("1 -> 3")
+    print("2 -> 4, 5")
+    print("\nTest Results:")
+    
+    # Test recursive DFS
+    print("Recursive DFS starting from vertex 0:", g.dfs_recursive(0))
+    
+    # Test iterative DFS
+    print("Iterative DFS starting from vertex 0:", g.dfs_iterative(0))
+    
+    # Test path finding
+    print("Path from 0 to 5:", g.dfs_find_path(0, 5))
+    print("Path from 3 to 5:", g.dfs_find_path(3, 5))  # No path exists
+
+# Run the test
+if __name__ == "__main__":
+    test_dfs()
