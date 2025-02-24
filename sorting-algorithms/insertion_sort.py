@@ -91,6 +91,17 @@ def insertion_sort_with_steps(arr):
     return arr
 
 def test_insertion_sort():
+    """
+    Test function for insertion sort implementation.
+    
+    This function tests insertion sort with various inputs:
+    - Random array
+    - Already sorted array
+    - Reverse sorted array
+    - Array with duplicate elements
+    - Empty array
+    - Array with one element
+    """
 
     test_cases = [
         [5, 2, 4, 6, 1, 3],           
