@@ -100,3 +100,14 @@ def test_insertion_sort():
         [],                           
         [1]                           
     ]
+
+    for i, test_case in enumerate(test_cases):
+        print(f"Test case {i+1}: {test_case}")
+        sorted_arr = insertion_sort(test_case)
+        print(f"Sorted result: {sorted_arr}")
+        
+        # Verify result with Python's built-in sort
+        expected = sorted(test_case)
+        assert sorted_arr == expected, f"Sort failed! Expected {expected}, got {sorted_arr}"
+        print("Test passed!")
+        print("-" * 40)
