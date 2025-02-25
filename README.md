@@ -92,7 +92,7 @@ Common use cases: Pathfinding, scheduling, and network flow.
 **Algorithms to Implement:**
 
 - [x] Breadth-First Search (BFS)
-- [ ] Depth-First Search (DFS)
+- [x] Depth-First Search (DFS)
 - [ ] Floyd-Warshall Algorithm (All-Pairs Shortest Paths)
 - [ ] Topological Sort
 - [ ] A* Algorithm
@@ -108,7 +108,7 @@ Common use cases: Data analysis, searching, and preprocessing.
 
 - [x] Bubble Sort
 - [x] Selection Sort
-- [ ] Insertion Sort
+- [x] Insertion Sort
 - [ ] Heap Sort
 - [ ] Merge Sort
 - [ ] Quick Sort
