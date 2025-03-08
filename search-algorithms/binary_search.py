@@ -16,6 +16,19 @@ def binary_search(arr, target):
     Returns:
         int: The index of the target element if found, -1 otherwise
         
+    Time Complexity:
+        - Best Case: O(1) when the middle element is the target
+        - Average Case: O(log n)
+        - Worst Case: O(log n) when the target is not in the array or at the ends
+        
+    Space Complexity:
+        - O(1) for iterative implementation
+        
+    Example:
+        >>> binary_search([1, 2, 3, 4, 5, 6], 4)
+        3
+        >>> binary_search([1, 2, 3, 4, 5, 6], 7)
+        -1
     """
     left, right = 0, len(arr) - 1
 
