@@ -30,18 +30,27 @@ def binary_search(arr, target):
         >>> binary_search([1, 2, 3, 4, 5, 6], 7)
         -1
     """
+    # Set initial boundaries for the search
     left, right = 0, len(arr) - 1
-
-    while left <= right:
-
-        mid = (left + right) // 2
-
-        if arr[mid] == target:
-            return mid  
     
+    # Continue searching while there are elements to search
+    while left <= right:
+        # Find middle index, using floor division to get an integer
+        # Using (left + right) // 2 can cause overflow in some languages,
+        # but Python handles large integers well
+        mid = (left + right) // 2
+        
+        # Check if the middle element is the target
+        if arr[mid] == target:
+            return mid  # Found the target, return its index
+        
+        # If target is greater, ignore left half
         elif arr[mid] < target:
             left = mid + 1
+            
+        # If target is smaller, ignore right half
         else:
             right = mid - 1
-
+            
+    # If we reach here, the element was not present
     return -1
