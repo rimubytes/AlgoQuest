@@ -54,3 +54,11 @@ def binary_search(arr, target):
             
     # If we reach here, the element was not present
     return -1
+
+def binary_search_recursive(arr, target, left=None, right=None):
+    # Initialize default values for first call
+    if left is None:
+        left = 0
+    if right is None:
+        right = len(arr) - 1
+    
