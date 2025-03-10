@@ -62,3 +62,9 @@ def binary_search_recursive(arr, target, left=None, right=None):
     if right is None:
         right = len(arr) - 1
     
+    
+    if left > right:
+        return -1
+    
+    # Find middle index
+    mid = (left + right) // 2
