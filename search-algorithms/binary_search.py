@@ -56,6 +56,17 @@ def binary_search(arr, target):
     return -1
 
 def binary_search_recursive(arr, target, left=None, right=None):
+    """
+    Recursive implementation of the binary search algorithm.
+    
+    This version uses recursion instead of iteration to perform the search.
+    
+    Args:
+        arr (list): A sorted list of elements
+        target: The element to find in the array
+        left (int, optional): The left boundary of the search. Defaults to 0.
+        right (int, optional): The right boundary of the search. Defaults to len(arr) - 1."
+    """
     # Initialize default values for first call
     if left is None:
         left = 0
