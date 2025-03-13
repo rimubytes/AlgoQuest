@@ -65,7 +65,24 @@ def binary_search_recursive(arr, target, left=None, right=None):
         arr (list): A sorted list of elements
         target: The element to find in the array
         left (int, optional): The left boundary of the search. Defaults to 0.
-        right (int, optional): The right boundary of the search. Defaults to len(arr) - 1."
+        right (int, optional): The right boundary of the search. Defaults to len(arr) - 1.
+
+    Returns:
+        int: The index of the target element if found, -1 otherwise
+        
+    Time Complexity:
+        - Best Case: O(1) when the middle element is the target
+        - Average Case: O(log n)
+        - Worst Case: O(log n)
+        
+    Space Complexity:
+        - O(log n) due to recursion stack
+        
+    Example:
+        >>> binary_search_recursive([1, 2, 3, 4, 5, 6], 4)
+        3
+        >>> binary_search_recursive([1, 2, 3, 4, 5, 6], 7)
+        -1
     """
     # Initialize default values for first call
     if left is None:
