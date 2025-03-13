@@ -79,3 +79,15 @@ def binary_search_recursive(arr, target, left=None, right=None):
     
     # Find middle index
     mid = (left + right) // 2
+
+    # Check if the middle element is the target
+    if arr[mid] == target:
+        return mid
+    
+    # If target is greater, search right half
+    elif arr[mid] < target:
+        return binary_search_recursive(arr, target, mid + 1, right)
+    
+    # If target is smaller, search left half
+    else:
+        return binary_search_recursive(arr, target, left, mid - 1)
