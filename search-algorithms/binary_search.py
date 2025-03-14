@@ -108,3 +108,18 @@ def binary_search_recursive(arr, target, left=None, right=None):
     # If target is smaller, search left half
     else:
         return binary_search_recursive(arr, target, left, mid - 1)
+
+def test_binary_search():
+        # (array, target, expected_index)
+        ([1, 2, 3, 4, 5, 6], 4, 3),            # Target in the middle
+        ([1, 2, 3, 4, 5, 6], 7, -1),           # Target not in array
+        ([1, 2, 2, 3, 4, 5], 2, 1),            # First occurrence of duplicate
+        ([], 1, -1),                           # Empty array
+        ([5], 5, 0),                           # Single element array, target present
+        ([5], 1, -1),                          # Single element array, target not present
+        ([1, 2, 3, 4, 5, 6], 1, 0),            # Target at beginning
+        ([1, 2, 3, 4, 5, 6], 6, 5)             # Target at end
+    ]
+
+    for i, (arr, target, expected) in enumerate(test_cases):
+        print(f"Test case {i+1}: Array: {arr}, Target: {target}")
