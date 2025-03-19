@@ -110,6 +110,7 @@ def binary_search_recursive(arr, target, left=None, right=None):
         return binary_search_recursive(arr, target, left, mid - 1)
 
 def test_binary_search():
+    test_cases = [
         # (array, target, expected_index)
         ([1, 2, 3, 4, 5, 6], 4, 3),            # Target in the middle
         ([1, 2, 3, 4, 5, 6], 7, -1),           # Target not in array
@@ -120,6 +121,4 @@ def test_binary_search():
         ([1, 2, 3, 4, 5, 6], 1, 0),            # Target at beginning
         ([1, 2, 3, 4, 5, 6], 6, 5)             # Target at end
     ]
-
-    for i, (arr, target, expected) in enumerate(test_cases):
-        print(f"Test case {i+1}: Array: {arr}, Target: {target}")
+    
