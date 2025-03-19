@@ -122,3 +122,18 @@ def test_binary_search():
         ([1, 2, 3, 4, 5, 6], 6, 5)             # Target at end
     ]
     
+    for i, (arr, target, expected) in enumerate(test_cases):
+        print(f"Test case {i+1}: Array: {arr}, Target: {target}")
+        
+        # Test iterative binary search
+        iterative_result = binary_search(arr, target)
+        print(f"  Iterative result: {iterative_result}, Expected: {expected}")
+        assert iterative_result == expected, f"Iterative search failed! Expected {expected}, got {iterative_result}"
+        
+        # Test recursive binary search
+        recursive_result = binary_search_recursive(arr, target)
+        print(f"  Recursive result: {recursive_result}, Expected: {expected}")
+        assert recursive_result == expected, f"Recursive search failed! Expected {expected}, got {recursive_result}"
+        
+        print("  Test passed!")
+        print("-" * 40)
