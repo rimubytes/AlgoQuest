@@ -146,3 +146,7 @@ binary_search_with_steps(example_arr, 7)
 print("\nSearching for 11:")
 binary_search_with_steps(example_arr, 11)
 print("\n")
+
+# Run all tests
+print("Running tests for binary search:")
+test_binary_search()
