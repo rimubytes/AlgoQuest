@@ -137,3 +137,12 @@ def test_binary_search():
         
         print("  Test passed!")
         print("-" * 40)
+
+print("Demonstration of Binary Search with step-by-step visualization:")
+example_arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print(f"Original array: {example_arr}")
+print("Searching for 7:")
+binary_search_with_steps(example_arr, 7)
+print("\nSearching for 11:")
+binary_search_with_steps(example_arr, 11)
+print("\n")
