@@ -34,3 +34,4 @@ def heap_sort(arr):
         
         heapify(result, i, 0)
     
+    return result
