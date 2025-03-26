@@ -22,3 +22,15 @@ def heapify(arr, n, i):
         # Recursively heapify the affected subtree
         heapify(arr, n, largest)
 
+def heap_sort(arr):
+    result = arr.copy()
+    n = len(result)
+    
+    for i in range(n // 2 - 1, -1, -1):
+        heapify(result, n, i)
+    
+    for i in range(n - 1, 0, -1):
+        result[i], result[0] = result[0], result[i]
+        
+        heapify(result, i, 0)
+    
