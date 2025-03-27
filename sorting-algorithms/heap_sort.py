@@ -23,15 +23,21 @@ def heapify(arr, n, i):
         heapify(arr, n, largest)
 
 def heap_sort(arr):
+    # Make a copy of the input array to avoid modifying the original
     result = arr.copy()
     n = len(result)
     
+    # Build a max heap
+    # We start from the last non-leaf node and heapify each node in reverse order
     for i in range(n // 2 - 1, -1, -1):
         heapify(result, n, i)
     
+    # Extract elements one by one from the heap
     for i in range(n - 1, 0, -1):
+        # Move current root (maximum element) to the end
         result[i], result[0] = result[0], result[i]
         
+        # Heapify the reduced heap (excluding the sorted elements)
         heapify(result, i, 0)
     
     return result
