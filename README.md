@@ -109,7 +109,7 @@ Common use cases: Data analysis, searching, and preprocessing.
 - [x] Bubble Sort
 - [x] Selection Sort
 - [x] Insertion Sort
-- [ ] Heap Sort
+- [x] Heap Sort
 - [ ] Merge Sort
 - [ ] Quick Sort
 
