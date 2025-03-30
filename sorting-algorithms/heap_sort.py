@@ -41,3 +41,17 @@ def heap_sort(arr):
         heapify(result, i, 0)
     
     return result
+
+def heap_sort_with_steps(arr):
+    result = arr.copy()
+    n = len(result)
+    
+    print("Initial array:", result)
+    
+    # Build a max heap
+    print("\nBuilding max heap:")
+    for i in range(n // 2 - 1, -1, -1):
+        heapify(result, n, i)
+        print(f"After heapifying at index {i}: {result}")
+    
+    print("\nMax heap built:", result)
