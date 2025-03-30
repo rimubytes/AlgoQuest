@@ -55,3 +55,5 @@ def heap_sort_with_steps(arr):
         print(f"After heapifying at index {i}: {result}")
     
     print("\nMax heap built:", result)
+   # Extract elements one by one
+   
