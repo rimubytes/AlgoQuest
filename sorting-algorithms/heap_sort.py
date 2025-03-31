@@ -56,4 +56,12 @@ def heap_sort_with_steps(arr):
     
     print("\nMax heap built:", result)
    # Extract elements one by one
-   
+    print("\nExtracting elements:")
+    for i in range(n - 1, 0, -1):
+        # Move current root to the end
+        result[i], result[0] = result[0], result[i]
+        print(f"Moved max element {result[i]} to position {i}: {result}")
+        
+        # Heapify the reduced heap
+        heapify(result, i, 0)
+        print(f"After heapifying reduced heap: {result}")
