@@ -65,3 +65,19 @@ def heap_sort_with_steps(arr):
         # Heapify the reduced heap
         heapify(result, i, 0)
         print(f"After heapifying reduced heap: {result}")
+
+def test_heap_sort():
+    test_cases = [
+        [5, 2, 4, 6, 1, 3],           
+        [1, 2, 3, 4, 5, 6],            
+        [6, 5, 4, 3, 2, 1],           
+        [3, 1, 4, 1, 5, 9, 2, 6, 5],   
+        [],                           
+        [1]                            
+    ]
+    
+    for i, test_case in enumerate(test_cases):
+        print(f"Test case {i+1}: {test_case}")
+        sorted_arr = heap_sort(test_case)
+        print(f"Sorted result: {sorted_arr}")
+        
