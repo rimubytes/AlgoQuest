@@ -81,3 +81,8 @@ def test_heap_sort():
         sorted_arr = heap_sort(test_case)
         print(f"Sorted result: {sorted_arr}")
         
+        # Verify result with Python's built-in sort
+        expected = sorted(test_case)
+        assert sorted_arr == expected, f"Sort failed! Expected {expected}, got {sorted_arr}"
+        print("Test passed!")
+        print("-" * 40)
