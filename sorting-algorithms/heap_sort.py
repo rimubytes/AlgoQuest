@@ -1,5 +1,19 @@
 def heapify(arr, n, i):
-
+    """
+    Heapify a subtree rooted at index i.
+    
+    This function maintains the max heap property for a subtree rooted at index i.
+    It assumes that the subtrees rooted at left and right children of node i
+    already satisfy the max heap property.
+    
+    Args:
+        arr (list): The array/list to be heapified
+        n (int): Size of the heap (typically the length of the array)
+        i (int): Index of the root of the subtree to be heapified
+        
+    Time Complexity: O(log n)
+    Space Complexity: O(1)
+    """
     # Initialize largest as root
     largest = i
     
