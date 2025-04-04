@@ -37,6 +37,13 @@ def heapify(arr, n, i):
         heapify(arr, n, largest)
 
 def heap_sort(arr):
+    """
+    Implementation of heap sort algorithm.
+    
+    Heap sort is a comparison-based sorting algorithm that uses a binary heap data structure.
+    It builds a max heap from the input data, then repeatedly extracts the maximum element
+    and rebuilds the heap until the array is sorted.
+    """
     # Make a copy of the input array to avoid modifying the original
     result = arr.copy()
     n = len(result)
