@@ -107,3 +107,10 @@ def test_heap_sort():
         assert sorted_arr == expected, f"Sort failed! Expected {expected}, got {sorted_arr}"
         print("Test passed!")
         print("-" * 40)
+
+if __name__ == "__main__":
+    print("Demonstration of Heap Sort with step-by-step visualization:")
+    example_arr = [12, 11, 13, 5, 6, 7]
+    print(f"Original array: {example_arr}")
+    heap_sort_with_steps(example_arr)
+    print("\n")
