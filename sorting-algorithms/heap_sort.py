@@ -64,6 +64,18 @@ def heap_sort(arr):
     return result
 
 def heap_sort_with_steps(arr):
+    """
+    Implementation of heap sort algorithm with step-by-step visualization.
+    
+    This version prints the state of the array after each major operation,
+    making it useful for educational purposes.
+    
+    Args:
+        arr (list): The array/list to be sorted
+        
+    Returns:
+        list: The sorted array
+    """
     result = arr.copy()
     n = len(result)
     
