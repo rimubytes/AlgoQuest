@@ -66,7 +66,7 @@ Common use cases: Puzzles like Sudoku, and combinatorial problems.
 **Algorithms to Implement:**
 
 - [x] N-Queens Problem
-- [ ] Sudoku Solver
+- [x] Sudoku Solver
 - [ ] Hamiltonian Path Problem
 - [ ] Subset Sum Problem
 
