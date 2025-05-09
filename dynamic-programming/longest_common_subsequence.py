@@ -1,5 +1,27 @@
-def longest_common_subsequence(text1, text2):
+"""
+Longest Common Subsequence (LCS) Dynamic Programming Implementation
 
+This module implements the LCS algorithm which finds the longest subsequence
+common to two sequences. A subsequence is a sequence that can be derived from
+another sequence by deleting some or no elements without changing the order
+of the remaining elements.
+"""
+    
+def longest_common_subsequence(text1, text2):
+    """
+    Find the longest common subsequence between two strings using dynamic programming.
+    
+    Args:
+        text1 (str): First string
+        text2 (str): Second string
+        
+    Returns:
+        str: The longest common subsequence
+    
+    Time Complexity: O(m*n) where m and n are the lengths of the input strings
+    Space Complexity: O(m*n)
+    """
+    
     m, n = len(text1), len(text2)
     
     dp = [[0] * (n + 1) for _ in range(m + 1)]
