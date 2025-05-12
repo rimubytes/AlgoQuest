@@ -56,7 +56,20 @@ def longest_common_subsequence(text1, text2):
     return ''.join(reversed(lcs))
 
 def lcs_length(text1, text2):
-
+    """
+    Find only the length of the longest common subsequence.
+    This is more memory-efficient if we don't need the actual subsequence.
+    
+    Args:
+        text1 (str): First string
+        text2 (str): Second string
+        
+    Returns:
+        int: The length of the longest common subsequence
+    
+    Time Complexity: O(m*n)
+    Space Complexity: O(m*n)
+    """
     # Get the lengths of the input strings
     m, n = len(text1), len(text2)
     
