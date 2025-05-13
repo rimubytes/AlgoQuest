@@ -86,3 +86,28 @@ def lcs_length(text1, text2):
     
     # The bottom-right cell contains the length of the LCS
     return dp[m][n]
+
+def lcs_optimized_space(text1, text2):
+    # Ensure text1 is the shorter string to optimize space
+    if len(text1) > len(text2):
+        text1, text2 = text2, text1
+    
+    m, n = len(text1), len(text2)
+    
+    # We only need to store two rows of the DP table at any time
+    prev_row = [0] * (m + 1)
+    curr_row = [0] * (m + 1)
+    
+    # Fill the dp table one row at a time
+    for j in range(1, n + 1):
+        for i in range(1, m + 1):
+            if text1[i - 1] == text2[j - 1]:
+                curr_row[i] = prev_row[i - 1] + 1
+            else:
+                curr_row[i] = max(prev_row[i], curr_row[i - 1])
+        
+        # Update prev_row for the next iteration
+        prev_row, curr_row = curr_row, [0] * (m + 1)
+    
+    # The last filled row contains the answer
+    return prev_row[m]
