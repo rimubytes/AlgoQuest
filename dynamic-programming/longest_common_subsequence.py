@@ -88,6 +88,19 @@ def lcs_length(text1, text2):
     return dp[m][n]
 
 def lcs_optimized_space(text1, text2):
+    """
+    Find the longest common subsequence between two strings using dynamic programming.
+    
+    Args:
+        text1 (str): First string
+        text2 (str): Second string
+        
+    Returns:
+        str: The longest common subsequence
+    
+    Time Complexity: O(m*n) where m and n are the lengths of the input strings
+    Space Complexity: O(m*n)
+    """
     # Ensure text1 is the shorter string to optimize space
     if len(text1) > len(text2):
         text1, text2 = text2, text1
