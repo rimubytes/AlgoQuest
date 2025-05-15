@@ -51,7 +51,7 @@ Common use cases: Sequence alignment, knapsack problem, and pathfinding.
 **Algorithms to Implement:**
 
 - [x] Fibonacci Sequence
-- [ ] Longest Common Subsequence
+- [x] Longest Common Subsequence
 - [ ] 0/1 Knapsack Problem
 - [x] Bellman-Ford Algorithm (Shortest Path)
 - [ ] Coin Change Problem
