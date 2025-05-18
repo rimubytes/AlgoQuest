@@ -124,3 +124,23 @@ def lcs_optimized_space(text1, text2):
     
     # The last filled row contains the answer
     return prev_row[m]
+
+def print_dp_table(dp, text1, text2):
+
+    # Print header
+    print("    ", end="")
+    print("  ", end="")
+    for char in text2:
+        print(f" {char} ", end="")
+    print()
+    
+    # Print the table with row and column labels
+    for i in range(len(dp)):
+        if i == 0:
+            print("  ", end="")
+        else:
+            print(f"{text1[i-1]} ", end="")
+        
+        for j in range(len(dp[0])):
+            print(f" {dp[i][j]} ", end="")
+        print()
