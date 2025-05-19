@@ -126,7 +126,14 @@ def lcs_optimized_space(text1, text2):
     return prev_row[m]
 
 def print_dp_table(dp, text1, text2):
-
+    """
+    Helper function to visualize the DP table for educational purposes.
+    
+    Args:
+        dp (list): 2D DP table
+        text1 (str): First string
+        text2 (str): Second string
+    """
     # Print header
     print("    ", end="")
     print("  ", end="")
@@ -144,3 +151,4 @@ def print_dp_table(dp, text1, text2):
         for j in range(len(dp[0])):
             print(f" {dp[i][j]} ", end="")
         print()
+
