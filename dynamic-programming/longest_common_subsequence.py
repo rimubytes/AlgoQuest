@@ -152,3 +152,15 @@ def print_dp_table(dp, text1, text2):
             print(f" {dp[i][j]} ", end="")
         print()
 
+# Example usage
+if __name__ == "__main__":
+    # Example 1
+    s1 = "ABCBDAB"
+    s2 = "BDCABA"
+    
+    result = longest_common_subsequence(s1, s2)
+    print(f"String 1: {s1}")
+    print(f"String 2: {s2}")
+    print(f"Longest Common Subsequence: {result}")  # Output: "BCBA"
+    print(f"Length of LCS: {lcs_length(s1, s2)}")  # Output: 4
+    print(f"Length of LCS (space optimized): {lcs_optimized_space(s1, s2)}")  # Output: 4
