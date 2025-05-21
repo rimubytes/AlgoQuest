@@ -164,3 +164,20 @@ if __name__ == "__main__":
     print(f"Longest Common Subsequence: {result}")  # Output: "BCBA"
     print(f"Length of LCS: {lcs_length(s1, s2)}")  # Output: 4
     print(f"Length of LCS (space optimized): {lcs_optimized_space(s1, s2)}")  # Output: 4
+
+    # Visualize a small example to demonstrate the DP table
+    s1_small = "ABC"
+    s2_small = "AC"
+    m, n = len(s1_small), len(s2_small)
+    
+    # Create and fill the DP table for visualization
+    dp = [[0] * (n + 1) for _ in range(m + 1)]
+    for i in range(1, m + 1):
+        for j in range(1, n + 1):
+            if s1_small[i - 1] == s2_small[j - 1]:
+                dp[i][j] = dp[i - 1][j - 1] + 1
+            else:
+                dp[i][j] = max(dp[i - 1][j], dp[i][j - 1])
+    
+    print("\nDP Table Visualization for 'ABC' and 'AC':")
+    print_dp_table(dp, s1_small, s2_small)
