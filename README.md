@@ -173,7 +173,7 @@ Common use cases: Approximation problems and probabilistic data structures.
 
 ### Progress Overview:
 
-- [ ] Beginner Algorithms
+- [x] Beginner Algorithms
 - [ ] Intermediate Algorithms
 - [ ] Advanced Algorithms
 
