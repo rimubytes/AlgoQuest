@@ -21,3 +21,15 @@ class TreeNode:
     def __repr__(self):
         """Return string representation of the node."""
         return f"TreeNode({self.value})"
+    
+
+class Graph:
+    def __init__(self, directed=False):
+        """Initialize an empty graph."""
+        self.graph = {}
+        self.directed = directed
+    
+    def add_vertex(self, vertex):
+        """Add a vertex to the graph."""
+        if vertex not in self.graph:
+            self.graph[vertex] = []
