@@ -33,3 +33,20 @@ class Graph:
         """Add a vertex to the graph."""
         if vertex not in self.graph:
             self.graph[vertex] = []
+
+    def add_edge(self, from_vertex, to_vertex):
+        """Add an edge between two vertices."""
+        # Add vertices if they don't exist
+        self.add_vertex(from_vertex)
+        self.add_vertex(to_vertex)
+        
+        # Add edge
+        self.graph[from_vertex].append(to_vertex)
+        
+        # If undirected, add reverse edge
+        if not self.directed:
+            self.graph[to_vertex].append(from_vertex)
+
+    def get_neighbors(self, vertex):
+        """Get all neighbors of a vertex."""
+        return self.graph.get(vertex, [])
