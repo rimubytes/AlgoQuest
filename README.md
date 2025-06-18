@@ -125,7 +125,7 @@ Common use cases: Searching elements in a list or tree.
 - [x] Linear Search
 - [x] Binary Search
 - [x] Depth-First Search (DFS)
-- [ ] Breadth-First Search (BFS)
+- [x] Breadth-First Search (BFS)
 
 ---
 
