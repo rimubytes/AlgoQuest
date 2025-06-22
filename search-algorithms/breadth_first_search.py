@@ -50,3 +50,25 @@ class Graph:
     def get_neighbors(self, vertex):
         """Get all neighbors of a vertex."""
         return self.graph.get(vertex, [])
+    
+def bfs_tree_search(root, target_value):
+    if root is None:
+        return None
+    
+    # Initialize queue with the root node
+    queue = deque([root])
+    
+    while queue:
+        # Dequeue the front node
+        current = queue.popleft()
+        
+        # Check if current node contains the target value
+        if current.value == target_value:
+            return current
+        
+        # Add all children to the queue for next level exploration
+        for child in current.children:
+            queue.append(child)
+    
+    # Target value not found
+    return None
