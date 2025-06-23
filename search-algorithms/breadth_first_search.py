@@ -72,3 +72,20 @@ def bfs_tree_search(root, target_value):
     
     # Target value not found
     return None
+
+def bfs_tree_traversal(root):
+    if root is None:
+        return []
+    
+    result = []
+    queue = deque([root])
+    
+    while queue:
+        current = queue.popleft()
+        result.append(current.value)
+        
+        # Add all children to the queue
+        for child in current.children:
+            queue.append(child)
+    
+    return result
