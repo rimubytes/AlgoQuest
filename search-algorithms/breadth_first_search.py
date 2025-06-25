@@ -89,3 +89,28 @@ def bfs_tree_traversal(root):
             queue.append(child)
     
     return result
+
+def bfs_graph_search(graph, start_vertex, target_value):
+    if start_vertex not in graph.graph:
+        return None
+    
+    # Keep track of visited vertices to avoid cycles
+    visited = set()
+    queue = deque([start_vertex])
+    visited.add(start_vertex)
+    
+    while queue:
+        current = queue.popleft()
+        
+        # Check if current vertex is the target
+        if current == target_value:
+            return current
+        
+        # Explore all unvisited neighbors
+        for neighbor in graph.get_neighbors(current):
+            if neighbor not in visited:
+                visited.add(neighbor)
+                queue.append(neighbor)
+    
+    # Target value not found
+    return None
