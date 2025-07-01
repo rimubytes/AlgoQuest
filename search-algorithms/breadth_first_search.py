@@ -116,4 +116,17 @@ def bfs_graph_search(graph, start_vertex, target_value):
     return None
 
 def bfs_shortest_path(graph, start_vertex, target_vertex):
+    """
+    Find the shortest path between two vertices using BFS.
     
+    Args:
+        graph: Graph object to search in
+        start_vertex: The starting vertex
+        target_vertex: The target vertex
+        
+    Returns:
+        list: The shortest path as a list of vertices, or None if no path exists
+        
+    Time Complexity: O(V + E) where V is vertices and E is edges
+    Space Complexity: O(V) for the visited set, queue, and parent tracking
+    """
