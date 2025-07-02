@@ -130,3 +130,35 @@ def bfs_shortest_path(graph, start_vertex, target_vertex):
     Time Complexity: O(V + E) where V is vertices and E is edges
     Space Complexity: O(V) for the visited set, queue, and parent tracking
     """
+    if start_vertex not in graph.graph or target_vertex not in graph.graph:
+        return None
+    
+    if start_vertex == target_vertex:
+        return [start_vertex]
+    
+    # Keep track of visited vertices and their parents
+    visited = set()
+    parent = {}
+    queue = deque([start_vertex])
+    visited.add(start_vertex)
+    parent[start_vertex] = None
+
+    while queue:
+        current = queue.popleft()
+        
+        # Explore all unvisited neighbors
+        for neighbor in graph.get_neighbors(current):
+            if neighbor not in visited:
+                visited.add(neighbor)
+                parent[neighbor] = current
+                queue.append(neighbor)
+                
+                # If we found the target, reconstruct the path
+                if neighbor == target_vertex:
+                    path = []
+                    node = target_vertex
+                    while node is not None:
+                        path.append(node)
+                        node = parent[node]
+                    return path[::-1]  # Reverse to get path from start to target
+    
