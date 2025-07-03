@@ -161,4 +161,4 @@ def bfs_shortest_path(graph, start_vertex, target_vertex):
                         path.append(node)
                         node = parent[node]
                     return path[::-1]  # Reverse to get path from start to target
-    
+
