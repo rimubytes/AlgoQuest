@@ -160,5 +160,6 @@ def bfs_shortest_path(graph, start_vertex, target_vertex):
                     while node is not None:
                         path.append(node)
                         node = parent[node]
-                    return path[::-1]  # Reverse to get path from start to target
-
+                    return path[::-1]  # Reverse to get path from start to target    
+    # No path found
+    return None
