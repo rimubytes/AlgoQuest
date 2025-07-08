@@ -163,3 +163,5 @@ def bfs_shortest_path(graph, start_vertex, target_vertex):
                     return path[::-1]  # Reverse to get path from start to target    
     # No path found
     return None
+
+def bfs_level_order_with_levels(root):
