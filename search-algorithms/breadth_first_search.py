@@ -165,3 +165,25 @@ def bfs_shortest_path(graph, start_vertex, target_vertex):
     return None
 
 def bfs_level_order_with_levels(root):
+    if root is None:
+        return []
+    
+    result = []
+    queue = deque([root])
+    
+    while queue:
+        level_size = len(queue)
+        current_level = []
+        
+        # Process all nodes at the current level
+        for _ in range(level_size):
+            node = queue.popleft()
+            current_level.append(node.value)
+            
+            # Add children for the next level
+            for child in node.children:
+                queue.append(child)
+        
+        result.append(current_level)
+    
+    return result
