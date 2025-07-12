@@ -1,6 +1,12 @@
 from collections import deque
+"""
+Breadth-First Search (BFS) Algorithm Implementation
 
+This module implements the BFS algorithm as a search algorithm for both tree and graph
+structures. BFS explores nodes level by level, making it optimal for finding the
+shortest path in unweighted graphs and the shallowest solution in tree searches.
 
+"""
 class TreeNode:
     """
     A class representing a node in a tree structure.
@@ -187,3 +193,4 @@ def bfs_level_order_with_levels(root):
         result.append(current_level)
     
     return result
+
