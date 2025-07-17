@@ -196,4 +196,20 @@ def bfs_level_order_with_levels(root):
 
 if __name__ == "__main__":
     print("=== BFS Tree Search Examples ===")
+
+    root = TreeNode(1)
+    node2 = TreeNode(2)
+    node3 = TreeNode(3)
+    node4 = TreeNode(4)
+    node5 = TreeNode(5)
+    node6 = TreeNode(6)
+    node7 = TreeNode(7)
+    node8 = TreeNode(8)
     
+    root.add_child(node2)
+    root.add_child(node3)
+    root.add_child(node4)
+    node2.add_child(node5)
+    node2.add_child(node6)
+    node4.add_child(node7)
+    node4.add_child(node8)
