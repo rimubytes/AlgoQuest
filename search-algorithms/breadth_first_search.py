@@ -213,3 +213,5 @@ if __name__ == "__main__":
     node2.add_child(node6)
     node4.add_child(node7)
     node4.add_child(node8)
+
+print("BFS Traversal:", bfs_tree_traversal(root))
