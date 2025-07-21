@@ -214,4 +214,12 @@ if __name__ == "__main__":
     node4.add_child(node7)
     node4.add_child(node8)
 
-print("BFS Traversal:", bfs_tree_traversal(root))
+    print("BFS Traversal:", bfs_tree_traversal(root))
+    
+    # Test BFS search
+    found_node = bfs_tree_search(root, 7)
+    print(f"Searching for 7: {found_node}")  # TreeNode(7)
+    
+    not_found = bfs_tree_search(root, 10)
+    print(f"Searching for 10: {not_found}")  # None
+
