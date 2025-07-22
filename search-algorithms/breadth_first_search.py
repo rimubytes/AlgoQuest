@@ -223,3 +223,9 @@ if __name__ == "__main__":
     not_found = bfs_tree_search(root, 10)
     print(f"Searching for 10: {not_found}")  # None
 
+    # Test level-order traversal with levels
+    levels = bfs_level_order_with_levels(root)
+    print("Level-order with levels:", levels)  
+    
+    print("\n=== BFS Graph Search Examples ===")
+    
