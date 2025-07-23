@@ -228,4 +228,13 @@ if __name__ == "__main__":
     print("Level-order with levels:", levels)  
     
     print("\n=== BFS Graph Search Examples ===")
+
+    graph = Graph()
+    vertices = ['A', 'B', 'C', 'D', 'E', 'F']
+    for vertex in vertices:
+        graph.add_vertex(vertex)
     
+    edges = [('A', 'B'), ('A', 'C'), ('B', 'D'), ('B', 'E'), 
+             ('C', 'E'), ('D', 'F'), ('E', 'F')]
+    for from_v, to_v in edges:
+        graph.add_edge(from_v, to_v)
