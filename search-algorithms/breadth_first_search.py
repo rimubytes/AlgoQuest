@@ -239,4 +239,6 @@ if __name__ == "__main__":
     for from_v, to_v in edges:
         graph.add_edge(from_v, to_v)
 
-        
+    # Test graph search
+    found_vertex = bfs_graph_search(graph, 'A', 'F')
+    print(f"Searching for 'F' starting from 'A': {found_vertex}") 
