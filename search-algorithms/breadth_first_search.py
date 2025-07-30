@@ -242,3 +242,6 @@ if __name__ == "__main__":
     # Test graph search
     found_vertex = bfs_graph_search(graph, 'A', 'F')
     print(f"Searching for 'F' starting from 'A': {found_vertex}") 
+
+    path = bfs_shortest_path(graph, 'A', 'F')
+    print(f"Shortest path from 'A' to 'F': {path}")
