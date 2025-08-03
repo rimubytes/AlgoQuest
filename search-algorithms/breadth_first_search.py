@@ -245,3 +245,8 @@ if __name__ == "__main__":
 
     path = bfs_shortest_path(graph, 'A', 'F')
     print(f"Shortest path from 'A' to 'F': {path}")
+
+    # Test non-existent path
+    graph.add_vertex('G')  # Isolated vertex
+    no_path = bfs_shortest_path(graph, 'A', 'G')
+    print(f"Path from 'A' to isolated 'G': {no_path}") 
