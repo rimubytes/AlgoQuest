@@ -171,6 +171,12 @@ def bfs_shortest_path(graph, start_vertex, target_vertex):
     return None
 
 def bfs_level_order_with_levels(root):
+    """
+    Perform BFS traversal and return nodes grouped by levels.
+       
+    Time Complexity: O(n) where n is the number of nodes
+    Space Complexity: O(w) where w is the maximum width of the tree
+    """
     if root is None:
         return []
     
@@ -250,3 +256,4 @@ if __name__ == "__main__":
     graph.add_vertex('G')  # Isolated vertex
     no_path = bfs_shortest_path(graph, 'A', 'G')
     print(f"Path from 'A' to isolated 'G': {no_path}") 
+    
