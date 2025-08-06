@@ -255,5 +255,5 @@ if __name__ == "__main__":
     # Test non-existent path
     graph.add_vertex('G')  # Isolated vertex
     no_path = bfs_shortest_path(graph, 'A', 'G')
-    print(f"Path from 'A' to isolated 'G': {no_path}") 
+    print(f"Path from 'A' to isolated 'G': {no_path}")  # None
     
